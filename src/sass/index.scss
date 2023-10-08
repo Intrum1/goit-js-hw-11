@@ -77,22 +77,33 @@ main {
     text-align: center;
 }
 
-/* Центрирование кнопки */
+
+.load-more-hidden {
+    display: none;
+  }
+
 .load-more {
-    display: block;
-    margin: 0 auto;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
 }
 
-/* Стилизация цвета фона и текста кнопки */
-.load-more {
-    background-color: blue; /* Синий цвет фона */
-    color: white; /* Белый цвет текста */
-    padding: 10px 20px; /* Отступы вокруг текста кнопки */
-    border: none; /* Убираем границу */
-    cursor: pointer; /* Устанавливаем стиль курсора */
-}
 
-/* Стили для при наведении на кнопку */
 .load-more:hover {
-    background-color: darkblue; /* Цвет фона при наведении */
-}
+    background-color: #0056b3;
+    transform: scale(1.05);
+  }
+  
+  .load-more:disabled {
+    background-color: #c1c1c1;
+    cursor: not-allowed;
+  }
