@@ -1,6 +1,7 @@
+
+import axios from '/src/extra';
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
-import axios from './extra'; // Поменяйте путь до вашего файла extra.js
 import Notiflix from 'notiflix';
 
 const refs = {
@@ -9,7 +10,7 @@ const refs = {
 };
 
 let page = 1;
-const apiKey = '39817690-1f31b393aea19fded90cb6900'; // Добавлено определение apiKey
+const apiKey = '39817690-1f31b393aea19fded90cb6900';
 const perPage = 40;
 let currentSearchQuery = '';
 
@@ -32,7 +33,6 @@ async function fetchImages(searchQuery, page = 1) {
     return [];
   }
 }
-
 
 function displayImages(images) {
   const imageElements = images.map(image => {
